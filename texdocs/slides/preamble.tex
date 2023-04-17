@@ -1,0 +1,26 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+\usepackage{hyperref}
+
+\usepackage[java]{src2listing}
+\usepackage{src2misc}
+\usepackage{src2sections}
+
+\usepackage{todonotes}
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+\AtBeginSection{
+    \begin{frame}
+        \frametitle{Themenüberblick}
+        \tableofcontents[sectionstyle={show/shaded}, subsectionstyle={show/hide/hide}]
+    \end{frame}
+}
+\AtBeginSubsection{
+    \begin{frame}
+        \frametitle{Themenüberblick}
+        \tableofcontents[sectionstyle={show/shaded}, subsectionstyle={show/shaded/hide}]
+    \end{frame}
+}
