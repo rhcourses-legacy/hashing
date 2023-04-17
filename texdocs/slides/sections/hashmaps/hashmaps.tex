@@ -1,0 +1,43 @@
+\begin{frame}
+    \begin{block}{Erinnerung: Binäre Suchbäume}
+        \begin{itemize}
+            \item effiziente Speicherung von Schlüssel-Wert-Paaren
+            \item schnelles Einfügen, Löschen und Suchen\\
+                  (z.B. \alert{\olog} bei AVL-Bäumen)
+            \item Pointerstrukturen mit bekannten Vor- und Nachteilen
+        \end{itemize}
+    \end{block}
+
+    \begin{block}<2->{Erinnerung: Heaps}
+        \begin{itemize}
+            \item vollständige Binärbäume mit Teil-Sortierung der Elemente
+            \item Einfügen und Löschen in \alert{\olog}
+            \item Zugriff auf Wurzel sogar in \alert{\oconst}
+            \item Speicherung als Array, effizienter als binäre Suchbäume
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Neues Ziel: Average-Case-Zugriff auf jeden Schlüssel in \alert{\oconst}}
+    \end{block}
+    \begin{block}<2->{Wie könnte das gehen?}
+        \begin{itemize}
+            \item<3-> Warum geht der Zugriff auf die Wurzel bei Heaps schnell?
+            \begin{itemize}
+                \item<4-> Position ist bekannt und muss nicht gesucht werden!
+            \end{itemize}
+            \item<5-> Können wir das für alle Elemente erreichen?
+            \begin{itemize}
+                \item<6-> Idee: Verwende ein Array und berechne
+                      die Position des Schlüssels aus dem Schlüssel selbst
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+    \begin{block}<7->{Welchen Preis müssen wir dafür bezahlen?}
+        \begin{itemize}
+            \item<8-> Erheblich mehr Speicherverbrauch 
+            \item<8-> Worst-Case-Komplexität schlechter als bei binären Suchbäumen
+        \end{itemize}
+    \end{block}
+\end{frame}
